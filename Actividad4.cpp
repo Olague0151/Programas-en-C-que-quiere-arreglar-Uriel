@@ -19,7 +19,7 @@ int main(){
     for(int i=1; i<4; i++){
     	printf("Vendedor %i\n", i);
     	for(int j=1; j<7; j++){
-    		printf("%i° Dia:", j);
+    		printf("%iÂ° Dia:", j);
     		
     		if(i==1){
     			scanf("%i", &vendedor1[j]);
@@ -46,8 +46,12 @@ int main(){
 	system("pause");
 	system("cls");
 	
-	printf("Primer vendedor\n");
-	switch(dia1){
+	int[3] vendedores = {dia1, dia2, dia3};
+
+	for(int i = 0; i<3; i++){
+		int current_vendedor = vendedores[i];
+		printf("Vendedor ", i, "/n");
+		switch(current_vendedor){
 		case 1:
 			printf("Lunes fue el dia de mayor venta\n");
 			break;
@@ -66,53 +70,9 @@ int main(){
 		case 6:
 			printf("Sabado fue el dia de mayor venta\n");
 			break;
+		}
 	}
-	
-	printf("Segundo vendedor\n");
-		switch(dia2){
-		case 1:
-			printf("Lunes fue el dia de mayor venta\n");
-			break;
-		case 2:
-			printf("Martes fue el dia de mayor venta\n");
-			break;
-		case 3:
-			printf("Miercoles fue el dia de mayor venta\n");
-			break;
-		case 4:
-			printf("Jueves fue el dia de mayor venta\n");
-			break;
-		case 5:
-			printf("Viernes fue el dia de mayor venta\n");
-			break;
-		case 6:
-			printf("Sabado fue el dia de mayor venta\n");
-			break;
-	}
-	
-	printf("Tercer vendedor\n");
-	
-		switch(dia3){
-		case 1:
-			printf("Lunes fue el dia de mayor venta\n");
-			break;
-		case 2:
-			printf("Martes fue el dia de mayor venta\n");
-			break;
-		case 3:
-			printf("Miercoles fue el dia de mayor venta\n");
-			break;
-		case 4:
-			printf("Jueves fue el dia de mayor venta\n");
-			break;
-		case 5:
-			printf("Viernes fue el dia de mayor venta\n");
-			break;
-		case 6:
-			printf("Sabado fue el dia de mayor venta\n");
-			break;
-	}
-	
+
 	system("pause");
 	system("cls");
 	
@@ -207,5 +167,4 @@ void mayor(int *vendedor1, int *vendedor2, int *vendedor3, int *dia1, int *dia2,
 		}
 	}	
 }
-
 
